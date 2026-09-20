@@ -43,6 +43,16 @@ class TestSkinConfig:
 
 
 class TestBuiltinSkins:
+    def test_toutfaire_skin_loads(self):
+        from hermes_cli.skin_engine import load_skin
+
+        skin = load_skin("toutfaire")
+        assert skin.name == "toutfaire"
+        assert skin.tool_prefix == "|"
+        assert skin.get_color("banner_title") == "#F59E0B"
+        assert skin.get_branding("agent_name") == "Toutfaire"
+        assert skin.get_branding("response_label") == " Toutfaire "
+
     def test_ares_skin_loads(self):
         from hermes_cli.skin_engine import load_skin
         skin = load_skin("ares")
@@ -141,6 +151,7 @@ class TestSkinManagement:
         skins = list_skins()
         names = [s["name"] for s in skins]
         assert "default" in names
+        assert "toutfaire" in names
         assert "ares" in names
         assert "mono" in names
         assert "slate" in names

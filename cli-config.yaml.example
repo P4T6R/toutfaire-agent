@@ -1294,7 +1294,9 @@ display:
   #     prompt_symbol: "⚔"                  # Prompt symbol (bare token; renderers add trailing space)
   #   tool_prefix: "╎"                       # Tool output line prefix (default: ┊)
   #
-  skin: default
+  # Toutfaire is the branded default for this fork. Use "default" to restore
+  # the original Hermes appearance.
+  skin: toutfaire
 
 # =============================================================================
 # Model Aliases — short names for /model command

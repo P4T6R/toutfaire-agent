@@ -468,7 +468,7 @@ def load_cli_config() -> Dict[str, Any]:
             # clarify) into scrollback so the decision survives the repaint.
             "persist_prompts": True,
 
-            "skin": "default",
+            "skin": "toutfaire",
         },
         "clarify": {
             "timeout": 120,  # Seconds to wait for a clarify answer before auto-proceeding
